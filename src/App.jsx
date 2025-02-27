@@ -24,7 +24,7 @@ import eightTea from './assets/cups/Rectangle 16.png'
 function App() {
 
   const loadCoffee = useLoaderData()
-  console.log(loadCoffee)
+  // console.log(loadCoffee)
   const [coffees, setCoffees] = useState(loadCoffee);
 
   const Navigate =useNavigate()

@@ -29,14 +29,14 @@ const AddCoffee = () => {
             imageUrl
         }
 
-        console.log("Product Name:", name);
-        console.log("Chief/Creator:", chief);
-        console.log("Supplier:", supplier);
-        console.log("Taste Profile:", taste);
-        console.log("Category:", category);
-        console.log("Product Details:", details);
-        console.log("Image URL:", imageUrl);
-        console.log(newCoffee)
+        // console.log("Product Name:", name);
+        // console.log("Chief/Creator:", chief);
+        // console.log("Supplier:", supplier);
+        // console.log("Taste Profile:", taste);
+        // console.log("Category:", category);
+        // console.log("Product Details:", details);
+        // console.log("Image URL:", imageUrl);
+        // console.log(newCoffee)
 
         const requestOptions = {
             method: 'POST',
@@ -44,10 +44,10 @@ const AddCoffee = () => {
             body: JSON.stringify(newCoffee)
         };
 
-        fetch('http://localhost:5000/coffee', requestOptions)
+        fetch('https://coffee-store-server-eight-mu.vercel.app/coffee', requestOptions)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'successful!',

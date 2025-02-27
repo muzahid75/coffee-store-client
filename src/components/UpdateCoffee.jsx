@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const UpdateCoffee = () => {
     const update = useLoaderData();
-    console.log(update);
+    // console.log(update);
 
     const Navigate = useNavigate()
 
@@ -24,16 +24,16 @@ const UpdateCoffee = () => {
 
         const newCoffee = { name, chief, supplier, taste, category, details, imageUrl };
 
-        console.log("Updating Coffee:", newCoffee);
+        // console.log("Updating Coffee:", newCoffee);
 
-        fetch(`http://localhost:5000/coffee/${update._id}`, {
+        fetch(`https://coffee-store-server-eight-mu.vercel.app/coffee/${update._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newCoffee),
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: "Success!",

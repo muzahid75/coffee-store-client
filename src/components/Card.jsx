@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Card = ({ coffee, coffees, setCoffees }) => {
-    console.log(coffee)
+    // console.log(coffee)
     const { _id, imageUrl, name, chief } = coffee;
 
     const handleDelete = (_id) => {
-        console.log(_id)
+        // console.log(_id)
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -24,12 +24,12 @@ const Card = ({ coffee, coffees, setCoffees }) => {
                 //     icon: "success"
                 //   });
 
-                fetch(`http://localhost:5000/coffee/${_id}`, {
+                fetch(`https://coffee-store-server-eight-mu.vercel.app/coffee/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",

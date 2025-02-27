@@ -84,10 +84,10 @@ const SignUp = () => {
                   body: JSON.stringify(newUser)
               };
       
-              fetch('http://localhost:5000/users', requestOptions)
+              fetch('https://coffee-store-server-eight-mu.vercel.app/users', requestOptions)
                   .then(response => response.json())
                   .then(data => {
-                      console.log(data)
+                      // console.log(data)
                       if (data.insertedId) {
                           Swal.fire({
                               title: 'successful!',

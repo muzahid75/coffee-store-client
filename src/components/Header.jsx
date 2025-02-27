@@ -11,10 +11,10 @@ const Header = () => {
     const handleSignout = () => {
         signOutUser()
             .then(() => {
-                console.log('sign out successfully')
+                // console.log('sign out successfully')
             })
-            .catch((error) => {
-                console.log(error);
+            .catch(() => {
+                // console.log(error);
             }
             )
     }
