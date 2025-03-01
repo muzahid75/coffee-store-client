@@ -44,7 +44,7 @@ const AddCoffee = () => {
             body: JSON.stringify(newCoffee)
         };
 
-        fetch('https://coffee-store-server-eight-mu.vercel.app/coffee', requestOptions)
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/coffee`, requestOptions)
             .then(response => response.json())
             .then(data => {
                 // console.log(data)

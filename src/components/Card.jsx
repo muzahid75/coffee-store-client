@@ -24,7 +24,7 @@ const Card = ({ coffee, coffees, setCoffees }) => {
                 //     icon: "success"
                 //   });
 
-                fetch(`https://coffee-store-server-eight-mu.vercel.app/coffee/${_id}`, {
+                fetch(`${import.meta.env.VITE_API_BASE_URL}/coffee/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

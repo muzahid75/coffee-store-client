@@ -84,7 +84,7 @@ const SignUp = () => {
                   body: JSON.stringify(newUser)
               };
       
-              fetch('https://coffee-store-server-eight-mu.vercel.app/users', requestOptions)
+              fetch(`${import.meta.env.VITE_API_BASE_URL}/users`, requestOptions)
                   .then(response => response.json())
                   .then(data => {
                       // console.log(data)

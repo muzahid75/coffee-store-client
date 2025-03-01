@@ -26,7 +26,7 @@ const UpdateCoffee = () => {
 
         // console.log("Updating Coffee:", newCoffee);
 
-        fetch(`https://coffee-store-server-eight-mu.vercel.app/coffee/${update._id}`, {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/coffee/${update._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newCoffee),
